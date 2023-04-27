@@ -40,3 +40,4 @@ Route::get('tarea/{tarea}/editar', [TareaController::class,'edit'])->name('Tarea
 Route::put('tarea/{tarea}/actualizar', [TareaController::class,'update'])->name('Tarea.update');
 Route::delete('tarea/{tarea}/eliminar',[TareaController::class,'destroy'])->name('Tarea.destroy');
 Route::get('tarea/asistencia', [TareaController::class,'asis'])->name('Tarea.asis');
+//
