@@ -24,7 +24,7 @@
     <hr>
     <div class="row">
         <div class="col-sm-12 mb-2">
-            <form action="{{ route('tarea.destroy', $tarea) }}" method="post">
+            <form action="{{ route('Tarea.destroy', $tarea) }}" method="post">
                 @csrf
                 @method('delete')
                 <x-primary-button class="ml-3">

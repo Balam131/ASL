@@ -4,7 +4,7 @@
 
 @section('contenido')
 
-    <form action="{{ route('tarea.store') }}" method="POST">
+    <form action="{{ route('Tarea.store') }}" method="POST">
         <x-tarea-form-body/>
 
     </form>

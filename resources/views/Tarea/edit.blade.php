@@ -6,7 +6,7 @@
     <h3>
         Editar tarea <i> {{ $tarea->nombre }}</i>
     </h3>
-    <form action="{{ route('tarea.update', $tarea) }}" method="POST">
+    <form action="{{ route('Tarea.update', $tarea) }}" method="POST">
         @method('put')
         <x-tarea-form-body :tarea="$tarea" />
     </form>

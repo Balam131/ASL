@@ -48,8 +48,8 @@
                         {{ $tarea->descripcion }}
                     </td>
                     <td>
-                        <a href="{{ route('tarea.edit', $tarea) }}">Editar</a>
-                        <a href="{{ route('tarea.show', $tarea) }}">Ver</a>
+                        <a href="{{ route('Tarea.edit', $tarea) }}">Editar</a>
+                        <a href="{{ route('Tarea.show', $tarea) }}">Ver</a>
                         
                     </td>
                 </tr>
