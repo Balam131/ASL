@@ -14,18 +14,18 @@ class TareaController extends Controller
     public function index()
     {
         $tareas = Tarea::orderByDesc('id')->get();
-        return view('tarea.index',compact('tareas'));
+        return view('Tarea.index',compact('tareas'));
     }
 
     public function asis()
     {
         
-        return view('tarea.asis');
+        return view('Tarea.asis');
     }
 
     public function inndextarea()
     {
-        return view('tarea.inndextarea');
+        return view('Tarea.inndextarea');
     }
 
     /**
@@ -33,7 +33,7 @@ class TareaController extends Controller
      */
     public function create()
     {
-        return view('tarea.create');
+        return view('Tarea.create');
             
     }
 
@@ -45,7 +45,7 @@ class TareaController extends Controller
         $datos = $request->validated();
 
         $tarea = Tarea::create($datos);
-        return redirect()->route('tarea.index');    
+        return redirect()->route('Tarea.index');    
         
     }
 
@@ -54,7 +54,7 @@ class TareaController extends Controller
      */
     public function show(Tarea $tarea)
     {
-        return view('tarea.show',['tarea'=>$tarea]);
+        return view('Tarea.show',['tarea'=>$tarea]);
     }
 
     /**
@@ -62,7 +62,7 @@ class TareaController extends Controller
      */
     public function edit(Tarea $tarea)
     {
-        return view('tarea.edit',compact('tarea'));
+        return view('Tarea.edit',compact('tarea'));
     }
 
     /**
@@ -72,7 +72,7 @@ class TareaController extends Controller
     {
         $datos = $request->validated();
         $tarea -> update($datos);
-        return redirect()->route('tarea.index');
+        return redirect()->route('Tarea.index');
     }
 
     /**
@@ -81,6 +81,6 @@ class TareaController extends Controller
     public function destroy(Tarea $tarea)
     {
         $tarea -> delete();
-        return redirect()->route('tarea.index');
+        return redirect()->route('Tarea.index');
     }
 }
