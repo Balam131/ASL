@@ -1,0 +1,128 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    background:	black;
+    padding: 40px;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.formulario {
+    width: 940px;
+    margin: 100px auto;
+}
+
+form {
+    margin: 100px 0;
+}
+
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+
+}
+
+.input-padron {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: #0b0b0bb3;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:940px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .caja,
+    .principal,
+    .contenidoDiferenciales,
+    .mapacontenido,
+    .video,
+    .productos,
+    .formulario {
+        width: auto;
+    }
+
+    .listaDiferenciales,
+    .imagenDiferenciales {
+        width: 100%;
+    }
+
+    .productos li {
+        width: 100%;
+        display: block;
+        padding: auto;
+    }
+
+
+}
