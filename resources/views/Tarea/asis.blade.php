@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="{{ asset('css/popup.css') }}" rel="stylesheet" type="text/css" />
 
     <title>Asistencia</title>
 </head>
@@ -26,12 +27,12 @@
                     <div class="flex">
                         <!-- Logo -->
                         <div class="shrink-0 flex items-center">
-                            
-                                <x-application-logo
-                                    class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                            
+
+                            <x-application-logo
+                                class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+
                         </div>
-            </div>
+                    </div>
         </header>
         <main>
             <div class="formulario">
@@ -39,22 +40,31 @@
                     @csrf
                     <div class="row">
                         <label for="Nocuenta">Número de cuenta</label>
-                        <input type="text" name="nocuenta" id="Nocuenta" class="form-control" placeholder="..." >                    
+                        <input type="number" name="nocuenta" id="Nocuenta" class="form-control" placeholder="...">
                         <label for="Contraseña"> Contraseña</label>
                         <input type="password" name="password" id="Contraseña" class="form-control" placeholder="...">
-                        <button type ='submit', class = 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'>
+                        <button type='submit' ,
+                            class='inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'>
                             Enviar
-                            <script> alert("Registrado")</script>
                         </button>
                     </div>
 
                 </form>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
             </div>
         </main>
-        
+
     </div>
-    
+
 </body>
 <footer>
     <p class="copyright">
