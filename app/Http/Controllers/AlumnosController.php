@@ -29,7 +29,7 @@ class AlumnosController extends Controller
     public function store(AlumnosRequest $request)
     {
         $datos = $request->validated();
-        $alumnos = Alumnos::create($datos);
+        Alumnos::create($datos);
         return redirect()->route('Tarea.asis');  
     }
 

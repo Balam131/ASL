@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('nocuenta',8);
             $table->string('password',8);
-            $table->date('fecha_asis')->now();
+            $table->timestamp('fecha_asis');
             $table->timestamps();
         });
     }

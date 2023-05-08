@@ -25,7 +25,7 @@ class AlumnosRequest extends FormRequest
             
             'nocuenta' => 'required|max:8',
             'password' => 'required|max:8',
-            'fecha_asis' => 'required|date_format:Y-m-d\TH:i',
+            'fecha_asis' => 'now|date_format:Y-m-d\TH:i',
         ];
     }
 }
