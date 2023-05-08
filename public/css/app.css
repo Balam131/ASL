@@ -129,8 +129,8 @@ body {
   
   form button {
     padding: 10px;
-    background-color: #6b6b6b;
-    color: #fff;
+    background-color: black;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -138,7 +138,7 @@ body {
   }
   
   form button:hover {
-    background-color: #fff;
+    background-color: black;
     color: #333;
   }
   

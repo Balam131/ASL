@@ -3,45 +3,59 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Asistencia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <title>Asistencia</title>
 </head>
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-white-100 ">
         <header>
-            <div class="caja">
-                <h1><img src="{{ asset('Sources/ASL.png') }}" alt="ASS"></h1>
-
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <!-- Logo -->
+                        <div class="shrink-0 flex items-center">
+                            
+                                <x-application-logo
+                                    class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                            
+                        </div>
             </div>
         </header>
         <main>
             <div class="formulario">
-                <form>
-                    <label for="Nocuenta">Número de cuenta</label>
-                    <input type="text" id="Nocuenta" class="input-padron" required>
+                <form action="{{ route('Alumnos.store') }}" method="POST">
+                    @csrf
+                    <div class="row">
+                        <label for="Nocuenta">Número de cuenta</label>
+                        <input type="text" name="nocuenta" id="Nocuenta" class="form-control" placeholder="..." >                    
+                        <label for="Contraseña"> Contraseña</label>
+                        <input type="password" name="password" id="Contraseña" class="form-control" placeholder="...">
+                        <input type="submit" value="Enviar Asistencia" class="enviar">
+                    </div>
 
-                    <label for="Contraseña"> Contraseña</label>
-                    <input type="password" id="Contraseña" class="input-padron" required placeholder="***************">
-
-                    <input type="submit" value="Enviar Asistencia" class="enviar">
                 </form>
 
             </div>
         </main>
         
     </div>
-    <footer>
-        <p class="copyright">
-            &copy Copyright JK - 2023</p>
-    </footer>
+    
 </body>
+<footer>
+    <p class="copyright">
+        &copy Copyright JK - 2023</p>
+</footer>
 
 </html>
