@@ -13,7 +13,7 @@
                     Numero de cuenta
                 </th>
                 <th>
-                    Fecha de Asistencia
+                    Fecha de Asistencias
                 </th>
             </tr>
         </thead>
