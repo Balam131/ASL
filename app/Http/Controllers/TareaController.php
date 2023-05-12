@@ -43,7 +43,6 @@ class TareaController extends Controller
     public function store(TareaRequest $request)
     {
         $datos = $request->validated();
-
         $tarea = Tarea::create($datos);
         return redirect()->route('Tarea.index');    
         
