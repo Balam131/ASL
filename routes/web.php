@@ -42,5 +42,5 @@ Route::put('tarea/{tarea}/actualizar', [TareaController::class,'update'])->name(
 Route::delete('tarea/{tarea}/eliminar',[TareaController::class,'destroy'])->name('Tarea.destroy');
 Route::get('tarea/asistencia', [TareaController::class,'asis'])->name('Tarea.asis');
 Route::post('alumnos/guardar', [AlumnosController::class, 'store'])->name('Alumnos.store');
-Route::get('alumnos/listar', [AlumnosController::class,'index'])->name('Asis.list');
+Route::get('alumnos/listar', [AlumnosController::class,'index'])->name('Asis.List');
 //

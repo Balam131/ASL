@@ -14,7 +14,7 @@ class AlumnosController extends Controller
     public function index()
     {
         $alumnos = Alumnos::orderByDesc('id')->get();
-        return view('Asis.list',compact('alumnos'));
+        return view('Asis.List',compact('alumnos'));
     }
 
     /**
