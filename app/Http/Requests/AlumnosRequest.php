@@ -23,7 +23,7 @@ class AlumnosRequest extends FormRequest
     {
         return [
             
-            'nocuenta' => 'required|min:8|max:8',
+            'nocuenta' => 'required|min:7|max:7',
             'password' => 'required|min:8|max:8',
             'fecha_asis' => 'date_format:Y-m-d\TH:i',
         ];
