@@ -43,6 +43,8 @@
                         <input type="number" name="nocuenta" id="Nocuenta" class="form-control" placeholder="...">
                         <label for="Contraseña"> Contraseña</label>
                         <input type="password" name="password" id="Contraseña" class="form-control" placeholder="...">
+                        <input type="text" name="fecha_asis" id="Fecha asistencia" class="form-control" value="value="<? php echo date("Y-m-d\TH-i");?>">
+                        <label for="Fecha asistencia"> Fecha de asistencia</label>
                         <button type='submit' ,
                             class='inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'>
                             Enviar
